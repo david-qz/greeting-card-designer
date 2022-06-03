@@ -11,6 +11,8 @@ const imageDisplay = document.getElementById('card-image');
 const themeSelect = document.getElementById('theme-select');
 const greetingCard = document.getElementById('greeting-card');
 
+const ratioSelect = document.getElementById('ratio-select');
+
 const exportButton = document.getElementById('export-button');
 
 // Constants
@@ -49,6 +51,10 @@ themeSelect.addEventListener('change', () => {
     const klass = themeSelect.value + '-theme';
     greetingCard.classList.value = '';
     greetingCard.classList.add(klass);
+});
+
+ratioSelect.addEventListener('change', () => {
+    greetingCard.style.aspectRatio = ratioSelect.value;
 });
 
 exportButton.addEventListener('click', async() => {

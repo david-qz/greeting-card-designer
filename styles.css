@@ -31,10 +31,8 @@ body {
 .input {
     font-family: 'Helvetica', sans-serif;
     box-sizing: border-box;
-    margin: 5px 0 0 0;
+    margin: 8px 0 0 0;
     padding: 3px;
-    border: 1px solid rgb(61, 61, 61);
-    border-radius: 2px;
 }
 
 .button {

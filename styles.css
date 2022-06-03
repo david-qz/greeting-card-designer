@@ -503,12 +503,16 @@ textarea {
 #top-text {
     font-size: 2.2em;
     font-weight: bold;
-    margin: 5px 0;
+    margin: 5px 10%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 #bottom-text {
     font-size: 1.2em;
-    margin: auto 0;
+    margin: 0 10%;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .placeholder {

@@ -1,9 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Cinzel:wght@400;700&family=Jura:wght@400;700&family=Open+Sans:wght@400;700&display=swap');/*
+/*
+    font-family: 'Caveat', cursive;
+    font-family: 'Cinzel', serif;
+    font-family: 'Jura', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+*/
 :root {
     --page-background: white;
+    --page-font-family: 'Helvetica', 'Arial', sans-serif;
+    --card-handwriting-font-family: 'Caveat', cursive;
+    --card-sanserif-font-family: 'Open Sans', sans-serif;
+    --card-serif-font-family: 'Cinzel', serif;
+    --card-jura-font-family: 'Jura', sans-serif;
 }
 
 body {
-    font-family: 'Helvetica', sans-serif;
+    font-family: var(--page-font-family);
     background-color: var(--page-background);
     padding: 10px;
 }
@@ -21,7 +33,7 @@ body {
 */
 
 .input {
-    font-family: 'Helvetica', sans-serif;
+    font-family: var(--page-font-family);
     box-sizing: border-box;
     margin: 8px 0 0 0;
     padding: 3px;
@@ -61,18 +73,18 @@ textarea {
 }
 
 #top-text {
-    font-size: 3em;
+    font-size: 2.2em;
+    font-weight: bold;
     margin: 5px 0;
 }
 
 #bottom-text {
-    font-size: 1.8em;
+    font-size: 1.2em;
     margin: auto 0;
 }
 
 .placeholder {
     color: rgba(0, 0, 0, 0.5);
-    font-family: monospace;
 }
 
 .placeholder::before {
@@ -83,9 +95,37 @@ textarea {
     content: ">";
 }
 
-.default-theme {
-    font-family: cursive;
+.simple-theme {
+    font-family: var(--card-sanserif-font-family);
     background-color: cornsilk;
+}
+
+.sunny-theme {
+    font-family: var(--card-handwriting-font-family);
+    background-color: rgb(156, 197, 209);
+}
+
+.sunny-theme > img {
+    filter: drop-shadow(0 0 3rem rgb(206, 209, 38));
+}
+
+.classic-theme {
+    font-family: var(--card-serif-font-family);
+    background-color: cornsilk;
+}
+
+.classic-theme > #top-text {
+    text-decoration: underline;
+}
+
+.fun-theme {
+    font-family: var(--card-handwriting-font-family);
+    background-color: rgb(191, 247, 136);
+}
+
+.fun-theme > #top-text::first-letter {
+    font-size: 1.6em;
+    margin: 2px;
 }
 
 @media (min-width: 750px) {

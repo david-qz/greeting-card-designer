@@ -11,16 +11,50 @@
 
 <body>
     <header>
-        <img src="assets/html_css_js.png">
-        <h1>Web UI Project</h1>
+        <h1>Greeting Card Designer</h1>
     </header>
-
     <main>
+        <section>
+            <p>
+                <label>
+                    Top Text<br>
+                    <input id="top-text-input" class="input max-width">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Image<br>
+                    <select id="image-select" class="input max-width">
+                        <option value="PLACEHOLDER" selected>PLACEHOLDER</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Bottom Text<br>
+                    <textarea id="bottom-text-input" class="input max-width" rows="6">PLACEHOLDER</textarea>
+                </label>
+            </p>
+            <p>
+                <label>
+                    Theme<br>
+                    <select id="theme-select" class="input max-width">
+                        <option value="PLACEHOLDER" selected>PLACEHOLDER</option>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <button id="export-button" class="input button">Export</button>
+            </p>
+            <div class="clear-fix"></div>
+        </section>
 
+        <div id="greeting-card" class="default-theme">
+            <p id="top-text">Top Text</p>
+            <img id="card-image" src="assets/card-images/trees.png"></img>
+            <p id="bottom-text">Bottom Text</p>
+        </div>
     </main>
-
-    <footer>&copy;2021 Aspiring Software Developer</footer>
-
     <script type="module" src="app.js"></script>
 </body>
 

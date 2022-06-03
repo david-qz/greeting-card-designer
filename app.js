@@ -8,6 +8,9 @@ const bottomTextDisplay = document.getElementById('bottom-text');
 const imageSelect = document.getElementById('image-select');
 const imageDisplay = document.getElementById('card-image');
 
+const themeSelect = document.getElementById('theme-select');
+const greetingCard = document.getElementById('greeting-card');
+
 // Constants
 // Grab values populated by html load so we don't duplicate definitions.
 const topTextDefault = topTextDisplay.textContent;
@@ -38,4 +41,10 @@ bottomTextInput.addEventListener('input', () => {
 imageSelect.addEventListener('change', () => {
     const imagePath = 'assets/card-images/' + imageSelect.value;
     imageDisplay.src = imagePath;
+});
+
+themeSelect.addEventListener('change', () => {
+    const klass = themeSelect.value + '-theme';
+    greetingCard.classList.value = '';
+    greetingCard.classList.add(klass);
 });

@@ -15,7 +15,8 @@
   },
   "globals": {
     "QUnit": false,
-    "supabase": false
+    "supabase": false,
+    "domtoimage": false
   },
   "rules": {
     "eqeqeq": ["error", "always"],
@@ -29,11 +30,11 @@
       }
     ],
     "quotes": [
-      "error", 
+      "error",
       "single",
-      { 
+      {
         "avoidEscape": true,
-        "allowTemplateLiterals": true 
+        "allowTemplateLiterals": true
       }
     ],
     "no-multi-spaces": [

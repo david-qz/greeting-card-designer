@@ -11,6 +11,8 @@ const imageDisplay = document.getElementById('card-image');
 const themeSelect = document.getElementById('theme-select');
 const greetingCard = document.getElementById('greeting-card');
 
+const exportButton = document.getElementById('export-button');
+
 // Constants
 // Grab values populated by html load so we don't duplicate definitions.
 const topTextDefault = topTextDisplay.textContent;
@@ -47,4 +49,12 @@ themeSelect.addEventListener('change', () => {
     const klass = themeSelect.value + '-theme';
     greetingCard.classList.value = '';
     greetingCard.classList.add(klass);
+});
+
+exportButton.addEventListener('click', async() => {
+    const dataUrl = await domtoimage.toPng(greetingCard);
+    const link = document.createElement('a');
+    link.download = 'card.png';
+    link.href = dataUrl;
+    link.click();
 });

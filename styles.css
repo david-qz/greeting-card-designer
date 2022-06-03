@@ -8,14 +8,6 @@ body {
     padding: 10px;
 }
 
-@media (min-width: 750px) {
-    main {
-        display: grid;
-        grid-template-columns: 35% 60%;
-        grid-gap: 5%;
-    }
-}
-
 .max-width {
     width: 100%;
 }
@@ -35,7 +27,7 @@ body {
     padding: 3px;
 }
 
-.button {
+button {
     padding: 6px;
 }
 
@@ -53,24 +45,44 @@ textarea {
 */
 
 #greeting-card {
-    text-align: center;
-    aspect-ratio: 4 / 3;
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+    aspect-ratio: 4 / 5;
+    margin: 20px;
+}
+
+#greeting-card > * {
+    align-self: center;
+    justify-self: center;
 }
 
 #card-image {
-    width: 60%;
+    width: 70%;
 }
 
 #top-text {
     font-size: 3em;
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 #bottom-text {
-    font-size: 2em;
+    font-size: 1.8em;
+    margin: auto 0;
 }
 
 .default-theme {
     font-family: cursive;
     background-color: cornsilk;
+}
+
+@media (min-width: 750px) {
+    main {
+        display: grid;
+        grid-template-columns: 35% 60%;
+        grid-gap: 5%;
+    }
+
+    #greeting-card {
+        margin-top: 0;
+    }
 }

@@ -5,6 +5,9 @@ const topTextDisplay = document.getElementById('top-text');
 const bottomTextInput = document.getElementById('bottom-text-input');
 const bottomTextDisplay = document.getElementById('bottom-text');
 
+const imageSelect = document.getElementById('image-select');
+const imageDisplay = document.getElementById('card-image');
+
 // Constants
 // Grab values populated by html load so we don't duplicate definitions.
 const topTextDefault = topTextDisplay.textContent;
@@ -30,4 +33,9 @@ topTextInput.addEventListener('input', () => {
 
 bottomTextInput.addEventListener('input', () => {
     setTextOrDefault(bottomTextDisplay, bottomTextInput.value, bottomTextDefault);
+});
+
+imageSelect.addEventListener('change', () => {
+    const imagePath = 'assets/card-images/' + imageSelect.value;
+    imageDisplay.src = imagePath;
 });

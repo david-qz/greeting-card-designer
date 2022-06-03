@@ -486,6 +486,8 @@ textarea {
     grid-template-rows: 25% 50% 25%;
     aspect-ratio: 4 / 5;
     margin: 20px;
+    align-content: center;
+    justify-content: center;
 }
 
 #greeting-card > * {

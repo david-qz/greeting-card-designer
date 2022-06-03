@@ -70,6 +70,19 @@ textarea {
     margin: auto 0;
 }
 
+.placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: monospace;
+}
+
+.placeholder::before {
+    content: "<";
+}
+
+.placeholder::after {
+    content: ">";
+}
+
 .default-theme {
     font-family: cursive;
     background-color: cornsilk;
